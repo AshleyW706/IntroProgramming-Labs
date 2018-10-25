@@ -28,9 +28,15 @@ def multFunc():
     return num1*num2
 
 def divFunc():
-    num1 = int(input("Enter the first number: "))
-    num2 = int(input("Enter the second number: "))
-    return num1//num2
+    while True:
+        try:
+            num1 = int(input("Enter the first number: "))
+            num2 = int(input("Enter the second number: "))
+            num1//num2
+        except:
+            print("Cannot divide by zero!")
+            continue
+        return num1//num2
     
 def doLoop():
     while True:
