@@ -6,7 +6,7 @@
 def showIntro():
     print("Welcome to the Arithmetic Engine!")
     print("=================================\n")
-    print("Valid commands are 'add', 'mult', 'sub', 'div', and 'quit'.\n")
+    print("Valid commands are 'add', 'mult', 'sub', 'div', 'exp', and 'quit'.\n")
 
 def showOutro():
     print("\nThank you for using the Arithmetic Engine…")
@@ -37,6 +37,11 @@ def divFunc():
             print("Cannot divide by zero!")
             continue
         return num1//num2
+
+def powerFunc():
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    return num1**num2
     
 def doLoop():
     while True:
@@ -50,6 +55,8 @@ def doLoop():
             x = multFunc()
         elif cmd == "div":
             x = divFunc()
+        elif cmd == "exp":
+            x = powerFunc()
         elif cmd == "quit":
             break   
         else:
